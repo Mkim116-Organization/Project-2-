@@ -7,29 +7,28 @@ body {
 header {
   background-color: #ffffff;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
 }
 
-header h1 img {
-  margin-left: 0;
-  max-width: 15rem;
-  max-height: 10rem;
-  padding-block: 5px;
+header a img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  max-width: 20rem;
+  max-height: 15rem;
+  padding-block: 0.3rem;
 }
 
-nav {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
+nav ul {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 nav li {
-  margin-right: 1rem;
   display: inline-block;
+  padding-inline: 0.2rem;
 }
 
 nav a {
@@ -37,14 +36,16 @@ nav a {
   color: black;
 }
 
-nav ul button {
+nav ul .btn {
+  margin-inline: auto;
+  margin-top: 0.3rem;
   background-color: #3c7194;
   border: none;
   color: white;
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
@@ -64,24 +65,17 @@ section {
   margin-bottom: 20px;
 }
 
-section h2 {
+section h1 {
+  font-weight: bold;
   font-size: 1.5em;
-  margin-inline: 5rem;
+  margin-inline: 2rem;
   margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.right-align {
-  font-size: 1rem;
-  text-align: right;
-  line-height: 1.5rem;
+  text-align: center;
 }
 
 .article-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  text-align: center;
 }
 
 .article-header h3 {
@@ -94,16 +88,31 @@ section h2 {
 }
 
 .article-date {
-  margin-left: 1em;
+  display: block;
+  text-align: center;
   font-size: 1em;
   font-weight: bold;
+  margin-inline: 1rem;
+}
+
+.science-news {
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
 }
 
 article {
   border: 1px solid #ddd;
-  padding: 2rem;
-  box-sizing: border-box;
-  display: inline-block;
+  margin-inline: 0;
+  padding: 10px;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 1.2rem;
 }
 
 article h4 {
@@ -146,8 +155,191 @@ article p strong {
   font-size: 1.4rem;
 }
 
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+form {
+  padding-top: 0.8rem;
+  text-align: center;
+}
+
+input[type="email"] {
+  width: 85%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #0080ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #005cb3;
+}
+
+.back-button {
+  padding-top: 0.3rem;
+}
+
+img {
+  display: block; 
+  margin: 0 auto;
+}
+
 footer {
   background-color: #F0F0F0;
   text-align: center;
   padding: 10px;
+}
+
+footer p {
+  margin-top: 0.5rem;
+  font-size: 12px;
+}
+
+footer nav {
+  text-align: center;
+  display: inline;
+}
+
+footer nav ul li {
+  margin-block: 0.2rem;
+}
+
+.btn {
+  background-color: #3c7194; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.btn:hover {
+  background-color: #005cb3; 
+}
+
+button {
+  background-color: #3c7194; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+button:hover {
+  background-color: #005cb3; 
+}
+
+/* Media query for smaller devices */
+@media (min-width: 650px) {
+  .container {
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 1rem;
+  }
+
+  article {
+    border: 1px solid #ddd;
+    margin-inline: 4rem;
+    padding: 20px;
+  }
+
+  .article-date {
+    margin-right: 0;
+    margin-left: 1rem;
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+  }
+
+  .article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header a img {
+    display: block;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 15rem;
+    max-height: 15rem;
+  }
+
+  nav {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul {
+    display: inline-block;
+    margin: 0;
+  }
+
+}
+
+/* Media query for medium devices*/
+@media (min-width: 900px) {
+  .container {
+      max-width: 80%;
+  }
+
+  h1 {
+      font-size: 1.25rem;
+  }
+}
+
+/* Media query for large devices (laptops/desktops) */
+@media (min-width: 1024px) {
+  .container {
+      max-width: 70%;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Media query for extra-large devices (large desktops) */
+@media (min-width: 1700px) {
+  .container {
+      max-width: 60%;
+  }
 }
